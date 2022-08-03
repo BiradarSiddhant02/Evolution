@@ -1,22 +1,23 @@
 import numpy as np
+import math
 
 class Creature:
-    def __init__(self, N_wall, S_wall, E_wall, W_wall,
-                 NE_corner, NW_corner, SE_corner, SW_corner,
-                 hungry, food_eaten, node_index, up, down, right, left, lay_eggs):
+    def __init__(self, N_wall = 0, S_wall = 0, E_wall = 0, W_wall = 0,
+                 NE_corner = 0, NW_corner = 0, SE_corner = 0, SW_corner = 0,
+                 up = 0, down = 0, right = 0, left = 0, lay_eggs = 0):
         
-        self.N_wall = N_wall
-        self.S_wall = S_wall
-        self.E_wall = E_wall
-        self.W_wall = W_wall
+        self.N_wall = 0
+        self.S_wall = 0
+        self.E_wall = 0
+        self.W_wall = 0
         
-        self.NE_corner = NE_corner
-        self.NW_corner = NW_corner
-        self.SE_corner = SE_corner
-        self.SW_corner = SW_corner
+        self.NE_corner = 0
+        self.NW_corner = 0
+        self.SE_corner = 0
+        self.SW_corner = 0
         
-        self.hungry = hungry
-        self.food_eaten = food_eaten
+        # self.hungry = hungry
+        # self.food_eaten = food_eaten
         
         self.up = 0
         self.right = 0
@@ -31,13 +32,14 @@ class Creature:
                            NW_corner : 5,
                            SE_corner : 6,
                            SW_corner : 7,
-                           hungry : 8,
-                           food_eaten : 9,
-                           up : 10,
-                           right : 11,
-                           left : 12,
-                           down : 13,
-                           lay_eggs : 14}
+                        #    hungry : 8,
+                        #    food_eaten : 9,
+                        }
+        self.movement = {up : 0,
+                    right : 1,
+                    left : 2,
+                    down : 3,
+                    lay_eggs : 4}                  
         
         # columns - nodes
         # rows - links 1 : connected 0 : not_connected
