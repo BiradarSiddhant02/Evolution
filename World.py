@@ -8,11 +8,11 @@ import math
 
 pygame.init()
 
-Win = pygame.display.set_mode((500, 500))
+Win = pygame.display.set_mode((1366, 720))
 pygame.display.set_caption("World")
 
-world_width = 500
-world_length = 500
+world_width = 1366
+world_length = 720
 
 creatures = []
 x_positions = []

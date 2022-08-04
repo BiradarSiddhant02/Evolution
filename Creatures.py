@@ -42,8 +42,8 @@ class Creature:
                          left : 2,
                          down : 3}                  
         
-        self.x_pos = rd.randint(0, 500)
-        self.y_pos = rd.randint(0, 500)
+        self.x_pos = rd.randint(0, 1366)
+        self.y_pos = rd.randint(0, 720)
         self.width = 10
         self.height = 10
         
