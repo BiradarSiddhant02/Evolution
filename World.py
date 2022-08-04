@@ -45,7 +45,7 @@ while run:
     Win.fill((0, 0, 0))
         
     for j, i in enumerate(creatures):
-        pygame.draw.rect(Win, (255, 0, 0), (x, y, 10, 10))
+        pygame.draw.rect(Win, (255, 0, 0), (x_positions[j], y_positions[j], 10, 10))
         # print(x_positions[j], y_positions[j], i.width, i.height)
     pygame.display.update()
     
